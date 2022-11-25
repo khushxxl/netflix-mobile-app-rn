@@ -9,11 +9,11 @@ import {
 import React, { useRef } from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  getAuth,
-} from 'firebase/auth'
+// import {
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   getAuth,
+// } from 'firebase/auth'
 
 const SigninScreen = () => {
   const navigation = useNavigation()
@@ -21,34 +21,34 @@ const SigninScreen = () => {
   const emailRef = useRef(null)
   const passRef = useRef(null)
 
-  const auth = getAuth()
+  // const auth = getAuth()
 
-  const register = (e) => {
-    e.preventDefault()
+  // const register = (e) => {
+  //   e.preventDefault()
 
-    createUserWithEmailAndPassword(
-      auth,
-      emailRef.current.value,
-      passwordRef.current.value,
-    )
-      .then((authUser) => {
-        console.log(authUser)
-      })
-      .catch((e) => alert(e.message))
-  }
+  //   createUserWithEmailAndPassword(
+  //     auth,
+  //     emailRef.current.value,
+  //     passwordRef.current.value,
+  //   )
+  //     .then((authUser) => {
+  //       console.log(authUser)
+  //     })
+  //     .catch((e) => alert(e.message))
+  // }
 
-  const signin = (e) => {
-    e.preventDefault()
-    signInWithEmailAndPassword(
-      auth,
-      emailRef.current.value,
-      passRef.current.value,
-    )
-      .then((authUser) => {
-        console.log(authUser)
-      })
-      .catch((e) => alert(e.message))
-  }
+  // const signin = (e) => {
+  //   e.preventDefault()
+  //   signInWithEmailAndPassword(
+  //     auth,
+  //     emailRef.current.value,
+  //     passRef.current.value,
+  //   )
+  //     .then((authUser) => {
+  //       console.log(authUser)
+  //     })
+  //     .catch((e) => alert(e.message))
+  // }
 
   return (
     <View style={{ flex: 1, height: '100%' }}>
@@ -93,7 +93,7 @@ const SigninScreen = () => {
                 color: '#8C8C8C',
                 fontWeight: '600',
                 paddingLeft: 10,
-                fontSize: 15,
+                fontSize: 15, 
                 borderRadius: 7,
               }}
             />
@@ -127,7 +127,7 @@ const SigninScreen = () => {
           <TouchableOpacity
             onPress={() => {
               try {
-                register()
+                // register()
                 console.log('register success')
                 navigation.navigate('LaunchScreen')
               } catch (error) {

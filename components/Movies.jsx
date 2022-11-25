@@ -42,7 +42,6 @@ const Movies = ({ fetchURL, header_title }) => {
         >
           {header_title}
         </Text>
-
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
